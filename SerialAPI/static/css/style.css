@@ -1,0 +1,22 @@
+.main-feed {
+
+}
+
+.feed-container {
+
+}
+
+.display-header {
+    text-align: center;
+}
+
+.value-display {
+    height: 100%;
+    font-size: 500%;
+    display: inline-block;
+}
+
+.graph-container {
+    width: 1000px;
+    display: inline-block;
+}
