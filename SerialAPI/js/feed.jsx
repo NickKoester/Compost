@@ -55,8 +55,10 @@ class Feed extends React.Component {
         return (
             <div>
                 <h1 className="display-header">{this.props.heading}</h1>
-                <div className="value-display">{this.state.value}</div>
-                <Graph id={this.props.heading} data={this.state.chartData} title={this.props.heading} label={this.state.label}/>
+                <div className="info-container">
+                    <div className="value-display">{this.state.value}</div>
+                    <Graph id={this.props.heading} data={this.state.chartData} title={this.props.heading} label={this.state.label}/>
+                </div>
             </div>
         );
     }

@@ -1,22 +1,20 @@
-.main-feed {
-
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.feed-container {
-
+.info-container {
+    display: flex;
+    justify-content: space-evenly;
 }
-
 .display-header {
     text-align: center;
 }
 
 .value-display {
-    height: 100%;
     font-size: 500%;
-    display: inline-block;
+    padding: 204px 0
 }
 
 .graph-container {
     width: 1000px;
-    display: inline-block;
 }

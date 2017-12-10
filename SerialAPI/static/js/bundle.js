@@ -21007,10 +21007,14 @@ var Feed = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'value-display' },
-                    this.state.value
-                ),
-                _react2.default.createElement(_graph2.default, { id: this.props.heading, data: this.state.chartData, title: this.props.heading, label: this.state.label })
+                    { className: 'info-container' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'value-display' },
+                        this.state.value
+                    ),
+                    _react2.default.createElement(_graph2.default, { id: this.props.heading, data: this.state.chartData, title: this.props.heading, label: this.state.label })
+                )
             );
         }
     }]);
