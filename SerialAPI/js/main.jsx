@@ -29,7 +29,7 @@ class MainFeed extends React.Component {
         return (
             <div className='feed-container'>
                 {this.state.feeds.map(feed => (
-                    <Feed url={feed.url} heading={feed.heading} key={feed.key}/>
+                    <Feed url={feed.url} heading={feed.heading} key={feed.key} unit={feed.unit}/>
                 ))}
             </div>
         );

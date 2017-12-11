@@ -18471,7 +18471,7 @@ var MainFeed = function (_React$Component) {
                 'div',
                 { className: 'feed-container' },
                 this.state.feeds.map(function (feed) {
-                    return _react2.default.createElement(_feed2.default, { url: feed.url, heading: feed.heading, key: feed.key });
+                    return _react2.default.createElement(_feed2.default, { url: feed.url, heading: feed.heading, key: feed.key, unit: feed.unit });
                 })
             );
         }
@@ -20960,7 +20960,7 @@ var Feed = function (_React$Component) {
             this.update();
             this.timerID = setInterval(function () {
                 return _this2.update();
-            }, 5000);
+            }, 1000);
         }
     }, {
         key: 'componentWillUnmount',
@@ -20987,7 +20987,7 @@ var Feed = function (_React$Component) {
                 _this3.setState({
                     value: data.value,
                     chartData: temp,
-                    label: data.unit
+                    unit: data.unit
                 });
             }).catch(function (error) {
                 return console.log(error);
@@ -21011,7 +21011,9 @@ var Feed = function (_React$Component) {
                     _react2.default.createElement(
                         'div',
                         { className: 'value-display' },
-                        this.state.value
+                        this.state.value,
+                        ' ',
+                        this.props.unit
                     ),
                     _react2.default.createElement(_graph2.default, { id: this.props.heading, data: this.state.chartData, title: this.props.heading, label: this.state.label })
                 )

@@ -9,7 +9,7 @@ class Feed extends React.Component {
         this.state = {
             value: 0,
             chartData: [],
-            label: ""
+            label: "",
         }
     }
 
@@ -17,7 +17,7 @@ class Feed extends React.Component {
         this.update();
         this.timerID = setInterval(
             () => this.update(),
-            5000
+            1000
         );
     }
 
@@ -44,7 +44,7 @@ class Feed extends React.Component {
                 this.setState({
                     value: data.value,
                     chartData: temp,
-                    label: data.unit
+                    unit: data.unit
                 });
             })
             .catch(error => console.log(error));
@@ -56,7 +56,7 @@ class Feed extends React.Component {
             <div>
                 <h1 className="display-header">{this.props.heading}</h1>
                 <div className="info-container">
-                    <div className="value-display">{this.state.value}</div>
+                    <div className="value-display">{this.state.value} {this.props.unit}</div>
                     <Graph id={this.props.heading} data={this.state.chartData} title={this.props.heading} label={this.state.label}/>
                 </div>
             </div>

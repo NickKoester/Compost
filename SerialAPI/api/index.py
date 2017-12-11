@@ -10,15 +10,19 @@ def api_index():
 
     temp = {'heading': 'Temperature',
             'url': flask.url_for('api_temp'),
+            'unit': 'C',
             'key': 1}
     humidity = {'heading': 'Relative Humidity',
                 'url': flask.url_for('api_humidity'),
+                'unit': '%',
                 'key': 2}
     carbon = {'heading': 'Carbon Monoxide',
               'url': flask.url_for('api_carbon'),
+              'unit': 'ppm',
               'key': 3}
     ammonia = {'heading': 'Ammonia',
                'url': flask.url_for('api_ammonia'),
+               'unit': 'ppm',
                'key': 4}
 
     feeds = [temp, humidity, carbon, ammonia]
@@ -33,7 +37,7 @@ def api_index():
 def api_temp():
     url = flask.url_for('api_temp')
     temp = data.get_temp_data()
-    unit = 'Temperature ( &deg;C )'
+    unit = 'Temperature ( C )'
 
     context = {'url': url,
                'unit': unit,
