@@ -20977,7 +20977,7 @@ var Feed = function (_React$Component) {
                 return response.json();
             }).then(function (data) {
                 var temp = [];
-                if (_this3.state.chartData.length >= 10) {
+                if (_this3.state.chartData.length >= 20) {
                     temp = _this3.state.chartData.slice(1);
                 } else {
                     temp = _this3.state.chartData;
@@ -20999,7 +20999,7 @@ var Feed = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'tile' },
                 _react2.default.createElement(
                     'h1',
                     { className: 'display-header' },
@@ -21009,7 +21009,7 @@ var Feed = function (_React$Component) {
                     'div',
                     { className: 'info-container' },
                     _react2.default.createElement(
-                        'div',
+                        'span',
                         { className: 'value-display' },
                         this.state.value,
                         ' ',
@@ -21069,10 +21069,10 @@ var Graph = function (_React$Component) {
         _this.options = {
             type: 'line',
             data: {
-                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
                 datasets: [{
                     label: _this.props.title,
-                    borderColor: 'rgba(52, 152, 219, 0.75)',
+                    borderColor: 'rgba(00, 188, 212, 1.0)',
                     data: [_this.props.data],
                     fill: false
                 }]
@@ -21132,7 +21132,7 @@ var Graph = function (_React$Component) {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                'div',
+                'span',
                 { className: 'graph-container' },
                 _react2.default.createElement('canvas', { id: this.props.id })
             );

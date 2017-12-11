@@ -34,7 +34,7 @@ class Feed extends React.Component {
 
             .then((data) => {
                 let temp = [];
-                if (this.state.chartData.length >= 10) {
+                if (this.state.chartData.length >= 20) {
                     temp = this.state.chartData.slice(1);
                 } else {
                     temp = this.state.chartData;
@@ -53,10 +53,10 @@ class Feed extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="tile">
                 <h1 className="display-header">{this.props.heading}</h1>
                 <div className="info-container">
-                    <div className="value-display">{this.state.value} {this.props.unit}</div>
+                    <span className="value-display">{this.state.value} {this.props.unit}</span>
                     <Graph id={this.props.heading} data={this.state.chartData} title={this.props.heading} label={this.state.label}/>
                 </div>
             </div>

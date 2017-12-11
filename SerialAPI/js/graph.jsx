@@ -7,10 +7,10 @@ class Graph extends React.Component {
         this.options = {
             type: 'line',
             data: {
-                labels: ['1', '2', '3', '4', '5', '6','7','8','9','10'],
+                labels: ['1', '2', '3', '4', '5', '6','7','8','9','10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
                 datasets: [{
                     label: this.props.title,
-                    borderColor: 'rgba(52, 152, 219, 0.75)',
+                    borderColor: 'rgba(00, 188, 212, 1.0)',
                     data: [
                         this.props.data
                     ],
@@ -65,9 +65,9 @@ class Graph extends React.Component {
 
     render() {
         return (
-            <div className="graph-container">
+            <span className="graph-container">
                 <canvas id={this.props.id}/>
-            </div>
+            </span>
         )
     }
 }
